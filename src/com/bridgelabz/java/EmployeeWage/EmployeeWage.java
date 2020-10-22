@@ -15,6 +15,7 @@ public class EmployeeWage {
 		int totalHrs = 0;
 		int end = 0;
 		while (end >= 0) {
+			++totalEmpDays;
 			int attendance = (int) (Math.floor(Math.random() * 10) % 3);
 			System.out.println(attendance);
 			switch (attendance) {
@@ -27,13 +28,11 @@ public class EmployeeWage {
 				System.out.println("Employee is present");
 				System.out.println();
 				empHrs = 8;
-				totalEmpDays++;
 				break;
 			case 2:
 				System.out.println("Employee is present for Part time");
 				System.out.println();
 				empHrs = 4;
-				totalEmpDays++;
 				break;
 			}
 			totalHrs += empHrs;
@@ -45,7 +44,7 @@ public class EmployeeWage {
 			}
 		}
 		System.out.println("Employee's salary for the month is " + totalMonthlyWage);
-		System.out.println("Total Employee Hours:" + totalHrs + "total Employee days" + totalEmpDays);
+		System.out.println("Total Employee Hours: " + totalHrs + " total Employee days " + totalEmpDays);
 	}
 
 }
