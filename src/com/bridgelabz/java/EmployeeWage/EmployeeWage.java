@@ -48,14 +48,14 @@ public void computeEmpWage(){
 				totalEmphrs += emphrs;
 				System.out.println("days" +totalworkingdays+ "Emphrs" +emphrs);
 			}
-			return totalEmphrs+companyEmpWage.empRateperHour;
+			return totalEmphrs*companyEmpWage.empRateperHour;
 			
 	}
 public static void main(String[] args) {
 // TODO Auto-generated method stub
 IComputeEmpWage empWageBuilder = new EmployeeWage();
-empWageBuilder.addCompanyEmpWage("facebook",20,2,10);
-empWageBuilder.addCompanyEmpWage("apple",10,4,20);
+empWageBuilder.addCompanyEmpWage("facebook",20,200,200);
+empWageBuilder.addCompanyEmpWage("apple",25,400,200);
 empWageBuilder.computeEmpWage();
 }
 }
