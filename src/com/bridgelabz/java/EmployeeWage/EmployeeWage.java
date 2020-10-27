@@ -33,7 +33,6 @@ public class EmployeeWage {
 					totalworkingdays++;
 					int random = (int) Math.floor(Math.random() * 10) % 3;
 					switch (random) {
-
 					case 1:
 						emphrs = 8;
 						break;
@@ -43,19 +42,19 @@ public class EmployeeWage {
 						break;
 
 					default:
-						emphrs = 0;// not present
+						emphrs = 0;
 
 					}
 					totalEmphrs += emphrs;
 					System.out.println("days" +totalworkingdays+ "Emphrs" +emphrs);
 				}
-				return totalEmphrs+companyEmpWage.empRatePerHour;
+				return totalEmphrs*companyEmpWage.empRatePerHour;
 				
 			}
 		public static void main(String[] args) {
 			EmployeeWage empWageBuilder = new EmployeeWage();
-			empWageBuilder.addCompanyEmpWage("facebook",20,2,10);
-			empWageBuilder.addCompanyEmpWage("apple",10,4,20);
+			empWageBuilder.addCompanyEmpWage("facebook",22,400,100);
+			empWageBuilder.addCompanyEmpWage("samsung",23,400,150);
 			empWageBuilder.computeEmpWage();
 }
 }
@@ -77,7 +76,7 @@ class CompanyEmpWage{
 	}
 	@Override
 	public String toString() {
-		return "Total Emp Wage for Company :"+company+"is :"+totalEmpWage;
+		return "Total Emp Wage for Company :"+company+"\tis :\t"+totalEmpWage;
 	}
 	
 }
